@@ -1,0 +1,11 @@
+LDA 2100H     ; Load 45H
+MOV B, A
+
+LDA 2101H     ; Load 12H
+MOV C, A
+
+MOV A, B
+SUB C
+
+STA 2102H
+HLT
