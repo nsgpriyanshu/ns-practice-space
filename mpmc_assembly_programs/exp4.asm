@@ -1,0 +1,71 @@
+MVI A,00H
+STA 2050H
+EI
+HLT            ; CPU waits for interrupt
+
+; ---- padding to reach 003CH ----
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+NOP
+
+NOP
+NOP
+NOP
+NOP
+
+; ---- RST 7.5 ISR (003CH) ----
+LDA 2050H
+INR A
+STA 2050H
+RET
